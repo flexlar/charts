@@ -41,6 +41,7 @@ export default class AxisChart extends BaseChart {
 		this.config.xIsSeries = options.axisOptions.xIsSeries || 0;
 		this.config.shortenYAxisNumbers = options.axisOptions.shortenYAxisNumbers || 0;
 		this.config.numberFormatter = options.axisOptions.numberFormatter;
+		this.config.seriesLabelSpaceRatio = options.axisOptions.seriesLabelSpaceRatio
 
 		this.config.yAxisRange = options.axisOptions.yAxisRange || {},
 
@@ -216,7 +217,7 @@ export default class AxisChart extends BaseChart {
 				function () {
 					let s = this.state;
 					s.xAxis.calcLabels = getShortenedLabels(this.width,
-						s.xAxis.labels, this.config.xIsSeries);
+						s.xAxis.labels, this.config.xIsSeries,this.config.seriesLabelSpaceRatio);
 
 					return s.xAxis;
 				}.bind(this)
