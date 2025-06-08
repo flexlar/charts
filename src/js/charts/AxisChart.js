@@ -9,6 +9,7 @@ import {
 	getTopOffset, getLeftOffset, MIN_BAR_PERCENT_HEIGHT, BAR_CHART_SPACE_RATIO,
 	LINE_CHART_DOT_SIZE
 } from '../utils/constants';
+import { shortenLargeNumber } from '../utils/draw-utils';
 
 export default class AxisChart extends BaseChart {
 	constructor(parent, args) {
@@ -270,7 +271,7 @@ export default class AxisChart extends BaseChart {
 						if (stacked && d.index === s.datasets.length - 1) {
 							labels = d.cumulativeYs;
 						} else {
-							labels = d.values;
+							labels = d.values.map(v => shortenLargeNumber(v));
 						}
 					}
 
@@ -403,16 +404,18 @@ export default class AxisChart extends BaseChart {
 			let relX = e.pageX - o.left - getLeftOffset(m);
 			let relY = e.pageY - o.top;
 
-			if (relY < this.height + getTopOffset(m)
+			if (!this.config.valuesOverPoints && relY < this.height + getTopOffset(m)
 				&& relY > getTopOffset(m)) {
 				this.mapTooltipXPosition(relX);
-			} else {
+			} else if (this.config.valuesOverPoints && e.target.getAttribute("class") == "data-point-value"){
+				this.mapTooltipXPosition(relX, -20)
+			}else {
 				this.tip.hideTip();
 			}
 		});
 	}
 
-	mapTooltipXPosition(relX) {
+	mapTooltipXPosition(relX, y=0) {
 		let s = this.state;
 		if (!s.yExtremes) return;
 
@@ -422,7 +425,7 @@ export default class AxisChart extends BaseChart {
 
 			this.tip.setValues(
 				dbi.xPos + this.tip.offset.x,
-				dbi.yExtreme + this.tip.offset.y,
+				dbi.yExtreme + this.tip.offset.y + y,
 				{ name: dbi.formattedLabel, value: '' },
 				dbi.values,
 				index
