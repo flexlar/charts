@@ -6,7 +6,7 @@ SRCDIR									= $(BASEDIR)/src
 DISTDIR									= $(BASEDIR)/dist
 DOCSDIR									= $(BASEDIR)/docs
 
-PROJECT									= frappe-charts
+PROJECT									= flexlar-charts
 
 NODEMOD									= $(BASEDIR)/node_modules
 NODEBIN									= $(NODEMOD)/.bin

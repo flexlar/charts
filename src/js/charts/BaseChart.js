@@ -223,7 +223,7 @@ export default class BaseChart {
 
 		this.svg = makeSVGContainer(
 			this.container,
-			"frappe-chart chart",
+			"flexlar-chart chart",
 			this.baseWidth,
 			this.baseHeight
 		);

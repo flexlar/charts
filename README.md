@@ -2,12 +2,12 @@
     
 <img width="80" alt="charts-logo" src="https://github.com/user-attachments/assets/37b7ffaf-8354-48f2-8b9c-fa04fae0135b" />
     
-# Frappe Charts
+# Flexlar Charts
 **GitHub-inspired modern, intuitive and responsive charts with zero dependencies**
 
 <p align="center">
-    <a href="https://bundlephobia.com/result?p=frappe-charts">
-        <img src="https://img.shields.io/bundlephobia/minzip/frappe-charts">
+    <a href="https://bundlephobia.com/result?p=flexlar-charts">
+        <img src="https://img.shields.io/bundlephobia/minzip/flexlar-charts">
     </a>
 </p>
 
@@ -15,14 +15,14 @@
 
 <div>
 
-[Explore Demos](https://frappe.io/charts) - [Edit at CodeSandbox](https://codesandbox.io/s/frappe-charts-demo-viqud) - [Documentation](https://frappe.io/charts/docs)  
+[Explore Demos](https://flexlar.io/charts) - [Edit at CodeSandbox](https://codesandbox.io/s/flexlar-charts-demo-viqud) - [Documentation](https://flexlar.io/charts/docs)  
 
 </div>
 
 </div>
 
-## Frappe Charts
-Frappe Charts is a simple charting library with a focus on a simple API. The design is inspired by various charts you see on GitHub.
+## Flexlar Charts
+Flexlar Charts is a simple charting library with a focus on a simple API. The design is inspired by various charts you see on GitHub.
 
 ### Motivation
 
@@ -30,7 +30,7 @@ ERPNext needed a simple sales history graph for its user company master to help 
 
 ### Key Features
 
-- **Variety of chart types**: Frappe Charts supports various chart types, including Axis Charts, Area and Trends, Bar, Line, Pie, Percentage, Mixed Axis, and Heatmap.
+- **Variety of chart types**: Flexlar Charts supports various chart types, including Axis Charts, Area and Trends, Bar, Line, Pie, Percentage, Mixed Axis, and Heatmap.
 - **Annotations and tooltips**: Charts can be annotated with x and y markers, regions, and tooltips for enhanced data context and clarity.
 - **Dynamic data handling**: Add, remove, or update individual data points in place, or refresh the entire dataset to reflect changes.
 - **Customizable configurations**: Flexible options like colors, animations, and custom titles allow for a highly personalized chart experience.
@@ -38,22 +38,22 @@ ERPNext needed a simple sales history graph for its user company master to help 
 ## Usage
 
 ```sh
-npm install frappe-charts
+npm install flexlar-charts
 ```
 
 Import in your project:
 ```js
-import { Chart } from 'frappe-charts'
+import { Chart } from 'flexlar-charts'
 // or esm import
-import { Chart } from 'frappe-charts/dist/frappe-charts.esm.js'
+import { Chart } from 'flexlar-charts/dist/flexlar-charts.esm.js'
 // import css
-import 'frappe-charts/dist/frappe-charts.min.css'
+import 'flexlar-charts/dist/flexlar-charts.min.css'
 ```
 
 Or directly include script in your HTML
 
 ```html
-<script src="https://unpkg.com/frappe-charts@1.6.1/dist/frappe-charts.min.umd.js"></script>
+<script src="https://unpkg.com/flexlar-charts@1.6.1/dist/flexlar-charts.min.umd.js"></script>
 ```
 
 
@@ -74,7 +74,7 @@ const data = {
     ]
 }
 
-const chart = new frappe.Chart("#chart", {  // or a DOM element,
+const chart = new flexlar.Chart("#chart", {  // or a DOM element,
                                             // new Chart() in case of ES6 module with above usage
     title: "My Awesome Chart",
     data: data,
@@ -100,10 +100,10 @@ const chart = new frappe.Chart("#chart", {  // or a DOM element,
 <br>
 <br>
 <div align="center">
-	<a href="https://frappe.io" target="_blank">
+	<a href="https://flexlar.io" target="_blank">
 		<picture>
-			<source media="(prefers-color-scheme: dark)" srcset="https://frappe.io/files/Frappe-white.png">
-			<img src="https://frappe.io/files/Frappe-black.png" alt="Frappe Technologies" height="28"/>
+			<source media="(prefers-color-scheme: dark)" srcset="https://flexlar.io/files/Flexlar-white.png">
+			<img src="https://flexlar.io/files/Flexlar-black.png" alt="Flexlar Technologies" height="28"/>
 		</picture>
 	</a>
 </div>
