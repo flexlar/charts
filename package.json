@@ -1,13 +1,13 @@
 {
-  "name": "frappe-charts",
-  "version": "2.0.0-rc27",
-  "main": "dist/frappe-charts.esm.js",
-  "module": "dist/frappe-charts.esm.js",
-  "browser": "dist/frappe-charts.umd.js",
-  "common": "dist/frappe-charts.cjs.js",
-  "unnpkg": "dist/frappe-charts.umd.js",
+  "name": "flexlar-charts",
+  "version": "2.0.0-rc29",
+  "main": "dist/flexlar-charts.esm.js",
+  "module": "dist/flexlar-charts.esm.js",
+  "browser": "dist/flexlar-charts.umd.js",
+  "common": "dist/flexlar-charts.cjs.js",
+  "unnpkg": "dist/flexlar-charts.umd.js",
   "type": "module",
-  "description": "https://frappe.github.io/charts",
+  "description": "https://flexlar.github.io/charts",
   "directories": {
     "doc": "docs"
   },
@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/frappe/charts.git"
+    "url": "git+https://github.com/flexlar/charts.git"
   },
   "keywords": [
     "js",
@@ -32,9 +32,9 @@
   "author": "Prateeksha Singh",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/frappe/charts/issues"
+    "url": "https://github.com/flexlar/charts/issues"
   },
-  "homepage": "https://github.com/frappe/charts#readme",
+  "homepage": "https://github.com/flexlar/charts#readme",
   "devDependencies": {
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
@@ -47,5 +47,6 @@
     "rollup-plugin-scss": "^4.0.1",
     "rollup-plugin-terser": "^6.1.0",
     "sass": "^1.86.0"
-  }
+  },
+  "packageManager": "yarn@1.22.19+sha1.4ba7fc5c6e704fce2066ecbfb0b0d8976fe62447"
 }

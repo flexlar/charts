@@ -1,10 +1,10 @@
 import * as Charts from './chart';
 
-let frappe     = { };
+let flexlar     = { };
 
-frappe.NAME    = 'Frappe Charts';
-frappe.VERSION = '2.0.0-rc22';
+flexlar.NAME    = 'Flexlar Charts';
+flexlar.VERSION = '2.0.0-rc22';
 
-frappe         = Object.assign({ }, frappe, Charts);
+flexlar         = Object.assign({ }, flexlar, Charts);
 
-export default frappe;
+export default flexlar;

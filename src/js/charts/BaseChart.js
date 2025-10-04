@@ -163,7 +163,7 @@ export default class BaseChart {
 			this.data = this.realData;
 			setTimeout(() => { this.update(this.data, true); }, this.initTimeout);
 		}
-		
+
 		if (this.config.showLegend) {
 			this.renderLegend();
 		}
@@ -186,7 +186,7 @@ export default class BaseChart {
 
 		this.svg = makeSVGContainer(
 			this.container,
-			'frappe-chart chart',
+			'flexlar-chart chart',
 			this.baseWidth,
 			this.baseHeight
 		);
@@ -240,7 +240,7 @@ export default class BaseChart {
 		if (!data) console.error('No data to update.');
 		if (!drawing) data = deepClone(data);
 		const animate = drawing ? !this.config.disableEntryAnimation : this.config.animate;
-		
+
 		this.data = this.prepareData(data);
 		this.calc(); // builds state
 		this.render(this.components, animate);

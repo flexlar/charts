@@ -14,7 +14,7 @@ export default [
 		input: 'src/js/index.js',
 		output: {
 			sourcemap: true,
-			name: 'frappe-charts',
+			name: 'flexlar-charts',
 			file: pkg.browser,
 			format: 'umd'
 		},
@@ -24,7 +24,7 @@ export default [
 				exclude: ['node_modules/**']
 			}),
 			terser(),
-			scss({ fileName: 'frappe-charts.min.css' }),
+			scss({ fileName: 'flexlar-charts.min.css' }),
 			bundleSize()
 		]
 	},
